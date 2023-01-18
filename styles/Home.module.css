@@ -1,5 +1,4 @@
 .main {
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -11,8 +10,17 @@
 .header {
   display: flex;
   flex-direction: column;
-  height: 560px;
+  height: 400px;
+  background: url('../public/hero-image.png');
+  background-position: bottom;
 }
+
+@media (min-width: 768px) {
+  .header {
+    height: 626px;
+    margin-bottom: 30px;
+  }
+} 
 
 .links {
   display: flex;
@@ -27,14 +35,15 @@
 .links img {
   border-radius: 50%;
   border: 2px solid white;
-  max-height: 560px;
 }
 
 .nav {
   display: flex;
+  max-width: 1200px;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
+  margin: 30px auto;
+  width: 100%;
 }
 
 .headerContent {
@@ -43,11 +52,122 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 125px;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .headerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 125px;
+  }
 }
 
 .subheader {
   color: white;
   font-size: 22px;
   line-height: 28px;
+}
+
+.videos {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.video {
+  display: flex;
+  margin-bottom: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .video {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    align-items: center;
+  }
+}
+
+.videoInfo {
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .videoInfo {
+    flex: 2;
+    padding: 0 100px 0 0;
+    margin-bottom: 0;
+  }
+}
+
+.video picture {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .video picture img {
+    width: 100%;
+  }
+}
+
+/******* FOOTER ******/
+.footer {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.footerNav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 50px 20px;
+}
+
+@media (min-width: 768px) {
+  .footerNav {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    padding-bottom: 50px;
+  }
+}
+
+.footerNav ul {
+  list-style: none;
+  margin-right: 60px;
+}
+
+.footerNav ul li:first-child{
+  font-family: 'SourceSansPro-Bold', sans-serif;
+  color: var(--redish);
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .footerBottom {
+    margin-top: 20px;
+    padding: 0;
+    padding-bottom: 40px; 
+  }
+}
+
+.terms ul {
+  display: flex;
+  list-style: none;
+}
+
+.terms li {
+  margin-left: 30px;
 }

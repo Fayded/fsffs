@@ -112,6 +112,7 @@ button {
   min-height: 55px;
   border-radius: 30px;
   border: 0;
+  cursor: pointer;
 }
 
 hr {
