@@ -17,12 +17,14 @@ export default function Header() {
         <div className={styles.links}>
           <Link href='/'>Account</Link>
           <Link href='/'>Help</Link>
-          <Image
-            src="/kevin.jpeg"
-            alt="Kevin Fay Avatar"
-            width={52}
-            height={52}
-          />
+          <Link href="/profile">
+            <Image
+              src="/kevin.jpeg"
+              alt="Kevin Fay Avatar"
+              width={52}
+              height={52}
+            />
+          </Link>
         </div>
       </nav>
       <div className={styles.headerContent}>

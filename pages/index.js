@@ -6,8 +6,6 @@ import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-import TwoColumn from '../components/TwoColumn'
-
 export async function getServerSideProps() {
   await queryClient.prefetchQuery('videos', () => getVideos());
   return {
@@ -19,7 +17,6 @@ export async function getServerSideProps() {
 
 export default function Home() {
   const { data } = useQuery(['videos'], () => getVideos());
-  console.log(data);
   return (
     <>
       <Head>
